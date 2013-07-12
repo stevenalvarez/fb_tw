@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns	= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		    = "com.bolivar.club"
+    versionCode = "1"
+	version 	= "1.0.0">
+
+	<name>Bolivar</name>
+
+	<description>
+		Aplicacion Bolivar
+	</description>
+
+	<author href="http://sysdecom.com"
+		email="steven.alvarez.v@gmail.com">
+		SYSDECOM
+	</author>
+    
+    <feature name="http://api.phonegap.com/1.0/device" />
+    
+    <preference name="permissions" value="none"/>
+    
+    <preference name="webviewbounce" value="false" />
+    <preference name="phonegap-version" value="2.9.0" /> <!-- all: current version of PhoneGap -->
+    <preference name="prerendered-icon" value="true" /> <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+    <preference name="ios-statusbarstyle" value="black-opaque" /> <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="splash-screen-duration" value="10000" />
+    <preference name="stay-in-webview" value="false" />
+    
+    <icon src="icons/android/icon.png" gap:platform="android" width="47" height="47" />
+    
+    <icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="icons/ios/icon@2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="icons/ios/icon-Small.png" gap:platform="ios" width="29" height="29" />
+    <icon src="icons/ios/icon-Small-50.png" gap:platform="ios" width="50" height="50" />
+    <icon src="icons/ios/icon-Small@2x.png" gap:platform="ios" width="58" height="58" />
+    
+    <gap:splash src="splash/ios/Default-568h@2x~iphone.png" gap:platform="ios" width="320" height="480" />
+    
+    <!-- setting facebook -->
+    <gap:plugin name="FacebookConnect">
+        <param name="APP_ID" value="" />
+        <param name="APP_NAME" value="" />
+    </gap:plugin>
+        
+    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+    <plugin name="InAppBrowser" />
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+
+    <access origin="*" browserOnly="true"/>
+	
+	<feature name="http://api.phonegap.com/1.0/battery"/>
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+    
+</widget>
