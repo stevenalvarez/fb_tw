@@ -43,8 +43,8 @@
     
     <!-- setting facebook -->
     <gap:plugin name="FacebookConnect">
-        <param name="APP_ID" value="" />
-        <param name="APP_NAME" value="" />
+        <param name="APP_ID" value="618389648185320" />
+        <param name="APP_NAME" value="Club Bolivar" />
     </gap:plugin>
         
     <plugin name="InAppBrowser" value="CDVInAppBrowser" />
