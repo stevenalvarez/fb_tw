@@ -41,8 +41,8 @@
     
     <gap:splash src="splash/ios/Default-568h@2x~iphone.png" gap:platform="ios" width="320" height="480" />
     
-    <!-- setting facebook -->
-    <gap:plugin name="FacebookConnect">
+    <!-- setting facebookconnect -->
+    <gap:plugin name="com.phonegap.plugins.facebookconnect">
         <param name="APP_ID" value="618389648185320" />
         <param name="APP_NAME" value="Club Bolivar" />
     </gap:plugin>
