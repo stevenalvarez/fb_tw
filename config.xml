@@ -50,6 +50,9 @@
     <plugin name="InAppBrowser" value="CDVInAppBrowser" />
     <plugin name="InAppBrowser" />
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    
+    <!-- ChildBrowser -->
+    <plugin name="ChildBrowser" value="com.phonegap.plugins.childBrowser.ChildBrowser"/>
 
     <access origin="*" browserOnly="true"/>
 	
