@@ -16,6 +16,7 @@
         <script src="cdv-plugin-fb-connect.js"></script>
         <script src="facebook-js-sdk.js"></script>
         <script src="TwitterPlugin.js"></script>
+        <script src="ChildBrowser.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript">
         var pictureSource;   // picture source
@@ -394,6 +395,9 @@
         </div>
         <div>
             <a data-role="button" data-theme="e" data-transition="slide" href="login_tw.html">Page Login Twitter</a>
+        </div>
+        <div>
+            <a href="#" onClick="window.plugins.childBrowser.showWebPage('http://www.google.com',{ showLocationBar: true });">childBrowser</a>
         </div>
         <button onclick="capturePhoto();">Capture Photo</button> <br>
         <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>

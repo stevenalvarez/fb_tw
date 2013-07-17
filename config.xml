@@ -46,15 +46,15 @@
         <param name="APP_ID" value="618389648185320" />
         <param name="APP_NAME" value="Club Bolivar" />
     </gap:plugin>
-        
+    
+    <!-- InAppBrowser -->    
     <plugin name="InAppBrowser" value="CDVInAppBrowser" />
     <plugin name="InAppBrowser" />
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <access origin="*" browserOnly="true"/>
     
     <!-- ChildBrowser -->
     <plugin name="ChildBrowser" value="com.phonegap.plugins.childbrowser"/>
-
-    <access origin="*" browserOnly="true"/>
 	
 	<feature name="http://api.phonegap.com/1.0/battery"/>
     <feature name="http://api.phonegap.com/1.0/camera"/>
