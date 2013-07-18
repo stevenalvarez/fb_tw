@@ -54,7 +54,7 @@
     <access origin="*" browserOnly="true"/>
     
     <!-- ChildBrowser -->
-    <plugin name="ChildBrowser" value="com.phonegap.plugins.childbrowser"/>
+    <gap:plugin name="com.phonegap.plugins.childbrowser" />
 	
 	<feature name="http://api.phonegap.com/1.0/battery"/>
     <feature name="http://api.phonegap.com/1.0/camera"/>
