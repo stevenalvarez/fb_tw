@@ -31,10 +31,15 @@
         //Twitter 
         var oauth; // Holds out oAuth request
         var requestParams; // Specific request params
+        
+        var consumer_key = '5MbWg9ZfT2W2wcDzyT8Q'; //YOUR Twitter CONSUMER_KEY
+        var consumer_secret = 'PRpVXyyaDmMiIGBX5Q2dUntNaLSyBWwQuoh78G9H6I'; //// YOUR Twitter CONSUMER_SECRET
+        var callback = 'http://www.patrocinalos.com/registro/deportistas';  //// YOUR CALLBACK URL
+        
         var options = { 
-                    consumerKey: '5MbWg9ZfT2W2wcDzyT8Q', // REPLACE WITH YOUR CONSUMER_KEY
-                    consumerSecret: 'PRpVXyyaDmMiIGBX5Q2dUntNaLSyBWwQuoh78G9H6I', // REPLACE WITH YOUR CONSUMER_SECRET
-                    callbackUrl: "http://www.patrocinalos.com/registro/deportistas" }; // YOUR URL 
+                    consumerKey: consumer_key, // REPLACE WITH YOUR CONSUMER_KEY
+                    consumerSecret: consumer_secret, // REPLACE WITH YOUR CONSUMER_SECRET
+                    callbackUrl: callback }; // YOUR URL 
         var twitterKey = "twttrKey"; // what we will store our twitter user information in
     
         // Wait for Cordova to connect with the device
@@ -318,7 +323,7 @@
         		/*
         		We will check to see if the childBrowser's new URL matches our callBackURL
         		*/
-        		if (loc.indexOf(callBackURL + "?") >= 0) {
+        		if (loc.indexOf(callback + "?") >= 0) {
         		  alert("entra carajo");
         			
         			// Parse the returned URL
@@ -368,6 +373,7 @@
         			);
         		}
         		else {
+        		  alert("loc" + loc);
         			// do nothing	
         		}
         	},
