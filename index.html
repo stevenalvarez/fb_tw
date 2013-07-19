@@ -289,7 +289,7 @@
         				function(data) {
         					requestParams = data.text;
         					window.plugins.childBrowser.showWebPage('https://api.twitter.com/oauth/authorize?'+requestParams, { showLocationBar : false }); // This opens the Twitter authorization / sign in page
-        					window.plugins.childBrowser.onLocationChange = function(loc){ console.log("peraaa" + loc); alert("asjkdf"); Twitter.success(loc); }; // When the ChildBrowser URL changes we need to track that
+        					window.plugins.childBrowser.onLocationChange = function(loc){ Twitter.success(loc); }; // When the ChildBrowser URL changes we need to track that
         				},
         				function(data) {
         					console.log("ERROR: "+data);
@@ -303,6 +303,7 @@
         	We will also determine if the request was a success or not here
         	*/
         	success:function(loc){
+        	   alert(loc);
         		
         		// The supplied oauth_callback_url for this session is being loaded
         		
@@ -359,6 +360,7 @@
         			);
         		}
         		else {
+        		  alert("loc: " + loc);
         			// do nothing	
         		}
         	},
