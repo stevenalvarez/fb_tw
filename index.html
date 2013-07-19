@@ -322,6 +322,7 @@
         						}
                                 var screen_name = accessParams.screen_name;
                                 console.log("name: " + screen_name);
+                                alert("nombre" + screen_name);
                                 
         						oauth.setAccessToken([accessParams.oauth_token, accessParams.oauth_token_secret]);
         						
@@ -346,6 +347,7 @@
                                 );                        
         						
         						// Since everything went well we can close our childBrowser!
+                                alert("puta");
         						window.plugins.childBrowser.close();
         				},
         				function(data) { 
