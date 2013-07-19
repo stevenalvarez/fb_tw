@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="css/tw.css" />
     	
         <!-- debug sin configurar en el config.xml -->
-        <script src="http://debug.phonegap.com/target/target-script-min.js#mobilelospa"></script>
+        <script src="http://debug.phonegap.com/target/target-script-min.js#com.bolivar.club"></script>
                 
         <script src="js/jquery-1.8.2.js"></script>
         <script src="js/jquery.mobile-1.3.1.js"></script>
@@ -303,14 +303,13 @@
         	We will also determine if the request was a success or not here
         	*/
         	success:function(loc){
-        	   alert("loc" + loc);
         		
         		// The supplied oauth_callback_url for this session is being loaded
         		
         		/*
         		We will check to see if the childBrowser's new URL matches our callBackURL
         		*/
-        		if (loc.indexOf("?") >= 0) {
+        		if (loc.indexOf("http://www.patrocinalos.com/registro/deportistas") >= 0) {
         			
         			// Parse the returned URL
                     var params = loc.toString().split("&");
@@ -326,7 +325,6 @@
         						}
                                 var screen_name = accessParams.screen_name;
                                 console.log("name: " + screen_name);
-                                alert("nombre" + screen_name);
                                 
         						oauth.setAccessToken([accessParams.oauth_token, accessParams.oauth_token_secret]);
         						
@@ -351,7 +349,6 @@
                                 );                        
         						
         						// Since everything went well we can close our childBrowser!
-                                alert("puta");
         						window.plugins.childBrowser.close();
         				},
         				function(data) { 
@@ -361,7 +358,6 @@
         			);
         		}
         		else {
-        		  alert("puttttttttttttttttttta");
         			// do nothing	
         		}
         	},
