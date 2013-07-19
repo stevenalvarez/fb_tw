@@ -294,7 +294,7 @@
         				function(data) {
         					requestParams = data.text;
         					window.plugins.childBrowser.showWebPage('https://api.twitter.com/oauth/authorize?'+data.text, { showLocationBar : false }); // This opens the Twitter authorization / sign in page
-        					window.plugins.childBrowser.onLocationChange = function(loc){ alert("cambio: " + loc); Twitter.success(loc); }; // When the ChildBrowser URL changes we need to track that
+        					window.plugins.childBrowser.onLocationChange = function(loc){ var vars = getUrlVars(); alert(vars); alert("cambio: " + loc); Twitter.success(loc); }; // When the ChildBrowser URL changes we need to track that
         				},
         				function(data) {
         					console.log("ERROR: "+data);
