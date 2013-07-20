@@ -35,13 +35,11 @@
         var consumer_key = '5MbWg9ZfT2W2wcDzyT8Q'; //YOUR Twitter CONSUMER_KEY
         var consumer_secret = 'PRpVXyyaDmMiIGBX5Q2dUntNaLSyBWwQuoh78G9H6I'; //// YOUR Twitter CONSUMER_SECRET
         var callback = 'http://www.patrocinalos.com/registro/deportistas';  //// YOUR CALLBACK URL
-        var verifier = 'DrLJKYKSJ0mUGpcvqKxoYmTQBnOZvTus9JdaXGtdGM';
         
         var options = { 
                     consumerKey: consumer_key, // REPLACE WITH YOUR CONSUMER_KEY
                     consumerSecret: consumer_secret, // REPLACE WITH YOUR CONSUMER_SECRET
-                    callbackUrl: callback,
-                    verifier : verifier }; // YOUR URL 
+                    callbackUrl: callback }; // YOUR URL 
         var twitterKey = "twttrKey"; // what we will store our twitter user information in
     
         // Wait for Cordova to connect with the device
@@ -296,7 +294,7 @@
         				function(data) {
         					requestParams = data.text;
         					window.plugins.childBrowser.showWebPage('https://api.twitter.com/oauth/authorize?'+data.text, { showLocationBar : false }); // This opens the Twitter authorization / sign in page
-        					window.plugins.childBrowser.onLocationChange = function(loc){ var vars = getUrlVars(); alert(vars.toSource()); alert("cambio: " + loc); Twitter.success(loc); }; // When the ChildBrowser URL changes we need to track that
+        					window.plugins.childBrowser.onLocationChange = function(loc){ alert("cambio: " + loc); Twitter.success(loc); }; // When the ChildBrowser URL changes we need to track that
         				},
         				function(data) {
         					console.log("ERROR: "+data);
@@ -321,7 +319,7 @@
         			
         			// Parse the returned URL
                     var params = loc.toString().split("&");
-                    verifier = params[1].toString();
+                    var verifier = params[1].toString();
                     console.log("verifier: " + verifier);
                     //get access token
                     oauth.get('https://api.twitter.com/oauth/access_token?' + verifier+'&'+requestParams,
