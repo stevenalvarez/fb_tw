@@ -317,15 +317,17 @@
         		/*
         		We will check to see if the childBrowser's new URL matches our callBackURL
         		*/
-        		if (loc.indexOf(callback + "?") >= 0) {
+        		if (loc.indexOf(callback) >= 0) {
+        		  alert("entra");
         			
         			// Parse the returned URL
-                    var params = loc.toString().split("&");
-                    verifier = params[1].toString();
-                    console.log("verifier: " + verifier);
+                    //var params = loc.toString().split("&");
+                    //verifier = params[1].toString();
+                    //console.log("verifier: " + verifier);
                     //get access token
-                    oauth.get('https://api.twitter.com/oauth/access_token?' + verifier+'&'+requestParams,
+                    oauth.get('https://api.twitter.com/oauth/access_token?oauth_verifier=' + verifier+'&'+requestParams,
         					function(data) {
+        					   alert("con resultado");
         						var accessParams = {};
         						var qvars_tmp = data.text.split('&');
         						for (var i = 0; i < qvars_tmp.length; i++) {
