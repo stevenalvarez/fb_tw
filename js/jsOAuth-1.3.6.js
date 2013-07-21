@@ -272,7 +272,7 @@ exports.OAuth = (function (global) {
                 consumerSecret: options.consumerSecret,
                 accessTokenKey: options.accessTokenKey || empty,
                 accessTokenSecret: options.accessTokenSecret || empty,
-                verifier: options.verifier || empty,
+                verifier: empty,
                 signatureMethod: options.signatureMethod || 'HMAC-SHA1'
             };
 
