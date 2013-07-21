@@ -323,6 +323,9 @@
                     //verifier = params[1].toString();
                     var verifier = oauth.getVerifier();
                     alert("verifier: " + verifier);
+                    alert("getAccessToken: " + oauth.getAccessToken());
+                    alert("getAccessTokenKey: " + oauth.getAccessTokenKey());
+                    alert("getAccessTokenSecret: " + oauth.getAccessTokenSecret());
                     console.log("verifier: " + verifier);
                     //get access token
                     oauth.get('https://api.twitter.com/oauth/access_token?oauth_verifier=' + verifier+'&'+requestParams,
